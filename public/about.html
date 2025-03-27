@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - NeuroWear</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    /* Reuse the same styling as index.html */
+    * {
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
+    }
+    :root {
+      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --secondary-color: #1a1a2e;
+      --accent-color: #64ffda;
+      --text-light: #f5f5f5;
+      --glass-bg: rgba(255, 255, 255, 0.05);
+      --section-spacing: 6rem;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-light);
+      background: var(--secondary-color);
+      overflow-x: hidden;
+    }
+    header {
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .main-nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .main-nav ul li a {
+      color: var(--text-light);
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .main-nav ul li a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-color);
+      transition: width 0.3s ease;
+    }
+    .main-nav ul li a:hover::before {
+      width: 100%;
+    }
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--text-light);
+    }
+    /* Main Section Spacing */
+    section {
+      margin-top: 80px; /* offset fixed header */
+      padding: var(--section-spacing) 2rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    /* Page Title */
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* About Content Box */
+    .about-content {
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+    }
+    /* Team Section */
+    .team-section {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .team-section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .team-members {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .member-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      width: 280px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .member-card:hover {
+      transform: translateY(-5px);
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    .member-card h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: var(--accent-color);
+    }
+    .member-card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      background: var(--secondary-color);
+      color: var(--text-light);
+      text-align: center;
+      padding: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 2rem;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none;
+      }
+      .main-nav.active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        background: var(--glass-bg);
+        padding: 1rem;
+        border-radius: 8px;
+      }
+      .main-nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">NeuroWear</a></div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger">☰</div>
+  </header>
+
+  <!-- About Section -->
+  <section>
+    <h1>About NeuroWear</h1>
+    <div class="about-content" data-aos="fade-up">
+      <p>
+        NeuroWear is an innovative technology company focused on developing AI-driven wearables that enhance human well-being. Our mission is to provide comfortable, stylish, and effective solutions for everyday challenges—ranging from stress management to improving personal performance.
+      </p>
+      <p>
+        Founded by a team of passionate engineers, designers, and healthcare professionals, NeuroWear stands at the forefront of combining neuroscience and advanced textile engineering. We believe in a future where clothing not only reflects personal style but also actively supports mental and physical health.
+      </p>
+      <p>
+        Every garment we create is carefully researched and tested to ensure the highest quality, reliability, and user satisfaction. Join us on this journey to redefine wearable technology and empower individuals worldwide.
+      </p>
+    </div>
+
+    <!-- Team Section -->
+    <div class="team-section">
+      <h2>Meet Our Team</h2>
+      <div class="team-members">
+        <!-- Member 1 -->
+        <div class="member-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="profile\Kavya.jpg" alt="Member 1" class="profile-pic" />
+          <h3>Kavya</h3>
+          <p><strong>Role:</strong> Founder &amp; Chief Technology Officer</p>
+          <p>
+            Specializing in sensor integration and AI algorithms, Member One ensures our garments adapt seamlessly to users’ moods and environments.
+          </p>
+        </div>
+        
+        <!-- Member 2 -->
+        <div class="member-card" data-aos="fade-up">
+          <img src="profile\Jivesh.png" alt="Member 2" class="profile-pic" />
+          <h3>Jivesh</h3>
+          <p><strong>Role:</strong> Co-Founder &amp; CEO</p>
+          <p>
+            With a background in Computer Science Engineering, Member Two spearheads NeuroWear’s vision for AI-powered wearables that blend comfort with cutting-edge technology.
+          </p>
+        </div>
+        
+        <!-- Member 3 -->
+        <div class="member-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="profile\Shubham.jpeg" alt="Shubham Raj" class="profile-pic" />
+          <h3>Shubham</h3>
+          <p><strong>Role:</strong> Lead Designer</p>
+          <p>
+            Combining fashion design with user-centric principles, Member Three creates sleek, comfortable garments that resonate with modern lifestyles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 NeuroWear. All Rights Reserved.</p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.main-nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroWear - AI-Powered Clothing</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- AOS CSS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="#hero" style="color:inherit; text-decoration:none;">NeuroWear</a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#sensors">Sensors</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="cta-button" id="preorder-btn">Pre-order</button>
+    <div class="hamburger">☰</div>
+  </header>
+
+  <!-- Particles Background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div data-aos="fade-up">
+      <h2>World’s First AI-Powered Clothing</h2>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Many struggle with stress, anxiety, or low energy throughout the day. NeuroWear’s innovative jacket detects stress, fatigue, or low mood and adjusts temperature, pressure, and scent diffusion to improve your well-being instantly.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>The Problem &amp; Our Solution</h2>
+    <p><strong>Problem:</strong> There’s no real-time, non-intrusive solution to regulate mood without medication or bulky devices.</p>
+    <p><strong>Solution:</strong> NeuroWear’s built-in biometric sensors and neuro-responsive fabric adapt to your mood on the fly, offering immediate comfort and relief.</p>
+  </section>
+
+  <!-- Combined Gallery Section -->
+  <section class="gallery" id="gallery">
+    <h2>Explore the NeuroWear Jacket</h2>
+    <div class="gallery-layout">
+      <!-- Left: Large image -->
+      <div class="gallery-left">
+        <img src="jacket/jacket.webp" alt="Main Jacket" />
+      </div>
+      <!-- Right: 2x2 grid -->
+      <div class="gallery-right">
+        <img src="jacket/Withsensors.webp" alt="Gallery Image 2" />
+        <img src="jacket/withsensors2.webp" alt="Gallery Image 3" />
+        <img src="jacket/Sideview.webp" alt="Gallery Image 4" />
+        <img src="jacket/girl.jpg" alt="Gallery Image 5" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Overlay for Gallery -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img src="" alt="Expanded View" id="lightbox-img">
+  </div>
+
+  <!-- Sensor Details Section -->
+  <section class="sensor-details" id="sensors">
+    <h2>Sensor Details</h2>
+    <div class="sensor-grid">
+      <div class="sensor-item" data-aos="zoom-in">
+        <h3>Heart Rate Sensor</h3>
+        <p>Uses optical technology to continuously monitor your pulse for real-time heart rate tracking.</p>
+      </div>
+      <div class="sensor-item" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Temperature Sensor</h3>
+        <p>Measures skin temperature with high precision for optimal thermal comfort.</p>
+      </div>
+      <div class="sensor-item" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Pressure Sensor</h3>
+        <p>Detects subtle pressure variations to ensure the garment adapts to your movements.</p>
+      </div>
+      <div class="sensor-item" data-aos="zoom-in" data-aos-delay="300">
+        <h3>Scent Diffusion Sensor</h3>
+        <p>Monitors cues to control the release of calming or energizing aromas.</p>
+      </div>
+      <div class="sensor-item" data-aos="zoom-in" data-aos-delay="400">
+        <h3>Accelerometer</h3>
+        <p>Tracks movement and activity levels to adjust responses for your dynamic lifestyle.</p>
+      </div>
+      <div class="sensor-item" data-aos="zoom-in" data-aos-delay="500">
+        <h3>Gyroscope</h3>
+        <p>Measures orientation changes to ensure the jacket adapts seamlessly to your posture.</p>
+      </div>
+      <div class="sensor-item" data-aos="zoom-in" data-aos-delay="600">
+        <h3>Humidity Sensor</h3>
+        <p>Monitors moisture levels to manage sweat and maintain comfort.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      <div class="feature-item" data-aos="fade-up">
+        <h3>Built-In Biometric Sensors</h3>
+        <p>Heart rate, skin temperature, and sweat level sensors monitor your stress in real time.</p>
+      </div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+        <h3>Neuro-Responsive Fabric</h3>
+        <p>Micro-fabric layers adjust temperature and pressure to match your mood and energy levels.</p>
+      </div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+        <h3>Scent Diffusion</h3>
+        <p>Releases calming or energizing scents to boost well-being without intrusive devices.</p>
+      </div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
+        <h3>AI-Powered Adjustments</h3>
+        <p>Proprietary AI analyzes data patterns to deliver personalized comfort instantly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Use Section -->
+  <section class="usage" id="contact">
+    <h2>How to Use</h2>
+    <p><strong>Step 1:</strong> Wear the NeuroWear Jacket like any normal jacket.</p>
+    <p><strong>Step 2:</strong> Turn on the built-in AI module via the discreet button on the cuff.</p>
+    <p><strong>Step 3:</strong> Sensors automatically monitor your stress, fatigue, and mood levels.</p>
+    <p><strong>Step 4:</strong> The fabric adjusts temperature/pressure while scent diffusers activate based on AI analysis.</p>
+    <p>This ensures a personalized, non-intrusive way to manage your well-being—no medication or bulky devices needed!</p>
+  </section>
+
+  <!-- Design Process Section -->
+  <section class="design-process" id="process">
+    <div class="design-card" data-aos="fade-up">
+      <h3>What's The Problem</h3>
+      <p><strong>Problem:</strong> Many people struggle with stress, anxiety, or low energy levels.</p>
+      <ol>
+        <li>Overwhelmed by daily demands.</li>
+        <li>Lack of time management.</li>
+        <li>No real-time, non-intrusive mood regulation.</li>
+        <li>Reliance on medication or bulky devices.</li>
+        <li>Limited accessibility to immediate comfort.</li>
+      </ol>
+    </div>
+    <div class="design-card" data-aos="fade-up" data-aos-delay="200">
+      <h3>Empathize &amp; Research</h3>
+      <ul>
+        <li><strong>Activities:</strong> Working, relaxing, managing tasks.</li>
+        <li><strong>Environment:</strong> Offices, homes, public spaces.</li>
+        <li><strong>Interactions:</strong> Using devices, engaging with peers.</li>
+        <li><strong>Users:</strong> Individuals seeking improved well-being.</li>
+      </ul>
+    </div>
+    <div class="design-card" data-aos="fade-up" data-aos-delay="400">
+      <h3>Brainstorm Solutions</h3>
+      <p>Generate diverse ideas—from AI-powered clothing to supportive apps offering subtle interventions.</p>
+    </div>
+    <div class="design-card" data-aos="fade-up" data-aos-delay="600">
+      <h3>Develop &amp; Refine Concepts</h3>
+      <p>Select and polish promising ideas with sketches or digital prototypes to integrate sensors and responsive materials.</p>
+    </div>
+    <div class="design-card" data-aos="fade-up" data-aos-delay="800">
+      <h3>Reflect &amp; Evaluate</h3>
+      <p>Review the solution’s success, document lessons learned, and identify future improvement areas.</p>
+    </div>
+  </section>
+
+  <!-- Pre-order Modal -->
+  <div class="modal" id="preorder-modal">
+    <div class="modal-content" data-aos="fade-up">
+      <span class="close-modal">&times;</span>
+      <!-- Form Container -->
+      <div id="form-container">
+        <h2>Pre-Order Your NeuroWear Jacket</h2>
+        <form id="preorder-form">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="tel" name="phone" placeholder="Your Phone Number" required>
+          <textarea name="message" placeholder="Additional Information" rows="4"></textarea>
+          <button type="submit" class="cta-button">Submit Pre-Order</button>
+        </form>
+      </div>
+      <!-- Success Message Container (hidden by default) -->
+      <div id="success-message" class="success-message"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#">Who We Are</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Sustainability</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Payment</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Cancellation &amp; Returns</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Policy</h4>
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Social</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 NeuroWear. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Client-side JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
