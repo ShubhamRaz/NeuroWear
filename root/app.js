@@ -101,4 +101,25 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('Error:', error);
     });
   });
+
+  // Reset 3D model camera orbit after user interaction
+  const modelViewer = document.querySelector('model-viewer');
+  let resetTimeout;
+  if (modelViewer) {
+    // Listen for mouse up (desktop)
+    modelViewer.addEventListener('mouseup', () => {
+      clearTimeout(resetTimeout);
+      resetTimeout = setTimeout(() => {
+        modelViewer.resetCameraOrbit();
+      }, 2000); // 2-second delay before reset
+    });
+    
+    // Listen for touch end (mobile)
+    modelViewer.addEventListener('touchend', () => {
+      clearTimeout(resetTimeout);
+      resetTimeout = setTimeout(() => {
+        modelViewer.resetCameraOrbit();
+      }, 2000);
+    });
+  }
 });

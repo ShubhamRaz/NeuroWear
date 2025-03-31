@@ -195,20 +195,6 @@ section {
 .gallery-left {
   flex: 0 0 45%;
 }
-.gallery-left img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  object-fit: cover;
-  border-radius: 16px;
-  border: 2px solid rgba(255,255,255,0.1);
-  box-shadow: 0 0 40px rgba(100, 255, 218, 0.2);
-  transition: transform 0.3s ease;
-}
-.gallery-left img:hover {
-  transform: scale(1.05);
-}
 .gallery-right {
   flex: 0 0 45%;
   display: grid;
@@ -253,6 +239,13 @@ section {
   padding: 2rem;
   transition: all 0.3s ease;
 }
+.sensor-item h3 {
+  text-align: center;
+}
+.sensor-item {
+  text-align: center;
+}
+
 .feature-item:hover, .sensor-item:hover, .design-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);

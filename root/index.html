@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="style.css">
   <!-- AOS CSS for animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Model Viewer for 3D Model rendering -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
   <!-- Header -->
@@ -54,13 +56,23 @@
   <section class="gallery" id="gallery">
     <h2>Explore the NeuroWear Jacket</h2>
     <div class="gallery-layout">
-      <!-- Left: Large image -->
+      <!-- Left: 3D Model Viewer replaces the large image -->
       <div class="gallery-left">
-        <img src="jacket/jacket.webp" alt="Main Jacket" />
+        <model-viewer 
+          src="jacket/jacket.glb" 
+          alt="Main Jacket 3D Model" 
+          camera-controls 
+          auto-rotate 
+          disable-zoom 
+          camera-orbit="0deg 75deg auto"
+          style="width: 100%; height: 500px; object-fit: contain;">
+        </model-viewer>
       </div>
+      
+      
       <!-- Right: 2x2 grid -->
       <div class="gallery-right">
-        <img src="jacket/Withsensors.webp" alt="Gallery Image 2" />
+        <img src="jacket/jacket.webp" alt="Gallery Image 2" />
         <img src="jacket/withsensors2.webp" alt="Gallery Image 3" />
         <img src="jacket/Sideview.webp" alt="Gallery Image 4" />
         <img src="jacket/girl.jpg" alt="Gallery Image 5" />
@@ -79,32 +91,44 @@
     <h2>Sensor Details</h2>
     <div class="sensor-grid">
       <div class="sensor-item" data-aos="zoom-in">
-        <h3>Heart Rate Sensor</h3>
-        <p>Uses optical technology to continuously monitor your pulse for real-time heart rate tracking.</p>
+        <h3>Electrodermal Activity (EDA) Sensors</h3>
+        <p>To monitor stress levels and emotional responses by measuring skin conductance.(Empatica E4)</p>
       </div>
       <div class="sensor-item" data-aos="zoom-in" data-aos-delay="100">
-        <h3>Temperature Sensor</h3>
-        <p>Measures skin temperature with high precision for optimal thermal comfort.</p>
+        <h3>Photoplethysmo graphy (PPG) Sensors</h3>
+        <p>For tracking heart rate and blood oxygen levels.(Maxim Integrated MAX30102)</p>
       </div>
       <div class="sensor-item" data-aos="zoom-in" data-aos-delay="200">
-        <h3>Pressure Sensor</h3>
-        <p>Detects subtle pressure variations to ensure the garment adapts to your movements.</p>
+        <h3>Electromyography (EMG) Sensors</h3>
+        <p>To detect muscle activity and body movement.(Myoware Muscle Sensor)</p>
       </div>
       <div class="sensor-item" data-aos="zoom-in" data-aos-delay="300">
-        <h3>Scent Diffusion Sensor</h3>
-        <p>Monitors cues to control the release of calming or energizing aromas.</p>
+        <h3>Temperature Sensors </h3>
+        <p>To monitor body temperature and adjust the fabric for comfort.(Texas Instruments TMP117)</p>
       </div>
       <div class="sensor-item" data-aos="zoom-in" data-aos-delay="400">
-        <h3>Accelerometer</h3>
-        <p>Tracks movement and activity levels to adjust responses for your dynamic lifestyle.</p>
+        <h3>Electroencephalo graphy (EEG) Sensors </h3>
+        <p>For analyzing brainwave patterns to detect emotional states.(OpenBCI Ultracortex)</p>
       </div>
       <div class="sensor-item" data-aos="zoom-in" data-aos-delay="500">
-        <h3>Gyroscope</h3>
-        <p>Measures orientation changes to ensure the jacket adapts seamlessly to your posture.</p>
+        <h3>Respiration Sensors</h3>
+        <p> To measure breathing patterns for relaxation monitoring.(Vernier Respiration Belt)</p>
       </div>
       <div class="sensor-item" data-aos="zoom-in" data-aos-delay="600">
-        <h3>Humidity Sensor</h3>
-        <p>Monitors moisture levels to manage sweat and maintain comfort.</p>
+        <h3>Inertial Measurement Units (IMU) </h3>
+        <p>Including accelerometers, gyroscopes, and magnetometers for tracking body motion and posture.(Bosch Sensortec BMI160)</p>
+      </div>
+      <div class="sensor-item" data-aos="zoom-in" data-aos-delay="700">
+        <h3>Haptic Feedback Actuators</h3>
+        <p>For providing gentle vibrations or other sensory feedback based on emotional states.(Precision Microdrives 310-103)</p>
+      </div>
+      <div class="sensor-item" data-aos="zoom-in" data-aos-delay="800">
+        <h3>Pressure Sensors</h3>
+        <p>To detect body posture and distribute pressure for ergonomic comfort.(Honeywell FSS Series)</p>
+      </div>
+      <div class="sensor-item" data-aos="zoom-in" data-aos-delay="900">
+        <h3>Gas Sensors</h3>
+        <p>To monitor environmental air quality and adjust scent diffusion.(MQ-135 Air Quality Sensor)</p>
       </div>
     </div>
   </section>
